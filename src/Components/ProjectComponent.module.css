@@ -1,0 +1,257 @@
+/* Project Section Start */
+
+.project {
+    background-color: #2f3035;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 10%;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 5rem;
+  }
+
+  .project__title {
+    font-size: 1.5rem;
+  }
+  
+  .project__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .project__list div {
+    background-color: #00b3b0;
+    border-radius: 8px;
+  }
+  
+  .project__list > div {
+    position: relative;
+    height: 30rem;
+    width: 90%;
+    margin-top: 2rem;
+  }
+  
+  .project__detail {
+    padding: 15px;
+  }
+  
+  .project__image {
+  }
+  
+  .project__image img {
+    border-radius: 8px;
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .project__name a {
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .project__name a:hover {
+    color: rgb(214, 214, 214);
+  }
+  
+  .project__description {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .project__link {
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;  
+    align-items: flex-end;  
+    
+  }
+
+  .project__link img {
+    height: 25px;
+    width: 25px;  
+    cursor: pointer;
+    filter: invert(1);
+
+  }
+
+  .project__link img:hover {
+    filter: invert(0.7);
+  }
+  
+  .project__stack ul {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 7px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: auto 10px 10px auto;
+  }
+  
+  .project__stack ul li {
+    background-color: #a3a6d1;
+    border-radius: 12px;
+    padding: 3px 5px;
+    font-size: 12px;
+  }
+  
+  .see_all {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    /* text-transform: uppercase; */
+    transition: all 0.1s linear;
+    font-size: 0.85rem;
+  }
+  
+  .see_all:hover {
+    color: var(--color);
+    box-shadow: 0 0.1rem 0 0 var(--color);
+  }
+  
+  
+  /* Single Project Section Start */
+
+.single__project {
+    background-color: #bdbdc4;
+    padding: 0 10%;
+  }
+  
+  .sp__header {
+    padding: 50px 0 30px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .sp__name h3 {
+    margin: 0;
+  }
+  
+  .sp__link {
+    margin-right: 20px;
+    transform: scale(1.5);
+  }
+  
+  .sp__link a i {
+    margin-left: 10px;
+    color: #6d6d72;
+  }
+  
+  .sp__link a i:hover {
+    color: black;
+  }
+  
+  .sp__image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 40px 0px;
+    margin-bottom: 50px;
+  }
+  
+  .sp__image img {
+    height: auto;
+    width: 90%;
+    object-fit: cover;
+  }
+  
+  .sp__stack ul {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+  }
+  
+  .sp__stack ul li {
+    background-color: #a3a6d1;
+    border-radius: 12px;
+    padding: 5px 8px;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .sp__requirement {
+    text-align: justify;
+  }
+  
+  .sp__description {
+    margin: 0;
+    padding: 10px 0 50px 0;
+  }
+  
+  .sp__description > p {
+    text-align: justify;
+  }
+  
+  @media screen and (max-width: 600px) {
+    /* Responsive Project Start */
+
+    .project {
+        height: auto;
+    }
+
+    .project__list {
+        display: flex;
+        flex-direction: column;
+    }
+    .project__list > div {
+        height: 30rem;
+    }
+
+    .project__link {
+      bottom: 20px;
+
+    }
+
+    .project__stack {
+        margin-top: 25px;
+    }
+
+    .project__stack ul {
+      gap: 7px;
+    }
+
+    .project__image img {
+        height: 70%;
+        width: 100%;
+    }
+    .project a {
+        margin-bottom: 2rem;
+    }
+
+  /* Responsive Project End */
+    .single__project {
+      padding: 0 3%;
+    }
+    .sp__image {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .sp__image img {
+      height: auto;
+      width: 90%;
+      object-fit: contain;
+    }
+  }
+  
+  /* Single Project Section End */
+  
+  /* Project End */

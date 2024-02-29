@@ -1,0 +1,50 @@
+.mail_auth {
+    background-color: rgb(53, 53, 53);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    text-align: center;
+
+}
+
+.mail_auth h3 {
+    margin: 0;
+    padding-top: 30px;
+    color: #4afffc;
+}
+
+.mail_auth p {
+    color: #ff0000;
+    font-size: 0.85rem;
+    height: 20px;    
+}
+
+.mail_auth form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.mail_auth form input {
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    outline: 0;
+    border: 2px solid #1aa6d1;
+    padding-left: 10px;
+
+}
+
+.mail_auth form input:focus{
+    box-shadow: 0 0 0 0.1rem #1aa6d1;
+    outline: 0;
+}
+
+.mail_auth form input[type="submit"] {
+    width: 70px;
+    cursor: pointer;
+}

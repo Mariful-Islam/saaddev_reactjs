@@ -1,0 +1,50 @@
+/* Client Start */
+
+.client {
+    background-color: var(--bg-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .client__header h3 {
+    margin-bottom: 90px;
+    font-size: 1.5rem;
+  }
+  .client__image {
+    height: 70px;
+    width: 70px;
+    align-items: center;
+    
+
+  }
+  .client__image img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+  }
+  
+  .client__name {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  
+  .client__review p {
+    text-align: center;
+    font-size: 0.77rem;
+    box-sizing: border-box;
+    height: 8rem;
+    width: 100%;
+  }
+  
+  
+  /* Client End */

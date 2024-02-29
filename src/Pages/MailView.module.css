@@ -1,0 +1,42 @@
+.mail_view {
+    margin: 0 15%;
+    background-color: #f3f3f3;
+    padding: 30px;
+    height: 450px;
+    border-radius: 10px;
+    color: #555555;
+    font-size: 0.7rem;
+  }
+
+.back_btn img {
+    height: 20px;
+    width: 20px;
+}
+
+.sender_name p img {
+    height: 20px;
+    width: 20px;
+}
+
+.sender_name {
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .sender_name h3,
+  .sender_name h5 {
+    margin: 10px 0;
+  }
+  
+  .sender_name input {
+    height: 30px;
+    width: 90px;
+    border: 2px solid #00e1ff;
+    border-radius: 5px;
+  }
+  
+  .sender_name input:hover {
+    background-color: #00e1ff;
+    color: white;
+  }
