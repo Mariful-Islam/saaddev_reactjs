@@ -27,7 +27,7 @@ const ServiceComponent = () => {
           <div class={style.service__list}>
             <ul class={style.service__item}>
               {services.map((service)=>(
-              <li><Link to={`/service/${name}/`}>
+              <li><Link to={`/service/${service.id}/`}>
                 {service.name}
               </Link></li>  
               ))} 

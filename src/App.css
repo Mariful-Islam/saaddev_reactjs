@@ -1,15 +1,23 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
 :root {
   --color: #4afffc;
   --bg-color: #303138;
 }
 
-body {
+h1 {
   margin: 0;
-  padding: 0;
-  background-color: white;
-  font-family: "Outfit", sans-serif;
-  width: 100%;
-  color: white;
 }
 
 .heading h3 {
@@ -181,11 +189,10 @@ footer {
   background-color: #1a1b22;
   height: 40vh;
   display: flex;
-  justify-content: center;
-  gap: 25%;
+  justify-content: space-between;
   font-size: 12px;
-  width: 100%;
 }
+
 #copyright {
   fill: white;
   height: 15px;
@@ -260,6 +267,54 @@ footer {
 
 /* Footer End */
 
+/*Service*/
+.service{
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  color: white;
+}
+
+.service__item {
+  margin: 0;
+  list-style: none;
+  padding: 20px 0 0 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 70px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.service__item li {
+  text-align: center;
+  height: 150px;
+  width: 200px;
+  padding: 10px;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.service__item img {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .service__item {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .service__item li {
+    width: 100%;
+  }
+}
+
 /* Responsive Start  */
 
 @media screen and (max-width: 992px) {
@@ -298,7 +353,6 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
   }
 
   .myself__wrapper {
@@ -400,7 +454,6 @@ footer {
     gap: 1px;
     justify-content: center;
     align-items: center;
-    /* margin-top: 419vh; */
     top: 925vh;
     height: auto;
   }
@@ -433,26 +486,37 @@ footer {
   background-color: #303138;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px 10%;
   color: white;
 }
 
-.service_view h3 {
+.service_view h1 {
   margin: 0;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  align-self: center;
   
 }
 
 .service_view img {
   height: 300px;
   width: 500px;
+  align-self: center;
+
 }
 .service_view_desc {
   padding: 20px 0;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 600px) {
+  .service_view img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 /* ============= ServiceView Page End ================ */
 
 /* =================Client Page Start================== */

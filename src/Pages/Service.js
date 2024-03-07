@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import style from './Service.module.css'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Service = () => {
+  const navigate = useNavigate()
   let [services, setServices] = useState([])
 
   useEffect(()=>{
@@ -18,17 +18,19 @@ const Service = () => {
 
   return (
     <div>
-        <main class={style.service} id="service">
-          <div class={style.heading}>
+        <main className='service' id="service">
+          <div className='heading'>
             <h1>Services</h1>
           </div>
 
-          <div class={style.service__list}>
-            <ul class={style.service__item}>
+          <div className='service__list'>
+            <ul className='service__item'>
               {services.map((service)=>(
-              <li><Link to={`/service/${service.id}`}>
+              <li onClick={()=>navigate(`/service/${service.id}`)}>
+                <img src={`http://saaddev.pythonanywhere.com/${service.image}`} alt=''/>
+                <br/>
                 {service.name}
-              </Link></li>
+              </li>
               ))}
             </ul>
           </div>

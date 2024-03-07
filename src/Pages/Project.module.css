@@ -238,7 +238,7 @@
     text-align: justify;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     /* Responsive Project Start */
 
     .project {

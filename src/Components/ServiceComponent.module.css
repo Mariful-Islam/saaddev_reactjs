@@ -67,9 +67,6 @@
   /* Responsive ---ServiceView Section Start */
 
   @media screen and (max-width: 600px) {
-  .service {
-    height: 65rem; 
-  }
   .service__list {
     margin-top: 200px;
     width: 100%;
