@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div>
       <Intro/>
-      <ProjectComponent/>
     </div>
   )
 }

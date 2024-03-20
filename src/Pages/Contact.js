@@ -20,7 +20,7 @@ const Contact = () => {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({username: name, email: email, subject: subject, message: message})
+        body: JSON.stringify({"username": name, "email": email, "subject": subject, "message": message})
       })
     let data = await response.json()
 
@@ -34,14 +34,13 @@ const Contact = () => {
   return (
     <div>
       <main>
-        <div className={style.contact__container}>
-          <div className={style.contact__wrapper}>
-            <div className={style.contact__form}>
-              <div className={style.contact__title}>
-                <h1>Contact With Me</h1>
+        <div className="contact__container">
+            <div className="contact__form">
+              <div className="contact__title">
+                <h1>Contact With <span>Me</span> </h1>
               </div>
               {contactResponse ? 
-              <p style={{color:"#4afffc", textAlign:"center"}}>{contactResponse}</p>
+              <p style={{color:"rgb(158, 84, 255)", textAlign:"center"}}>{contactResponse}</p>
               :
               <form method="post" onSubmit={(e)=>contactForm(e)}>
                 <label for="name">Name</label>
@@ -57,7 +56,6 @@ const Contact = () => {
 }
             </div>
           </div>
-        </div>
       </main>
 
     </div>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+		<!--	created with www.mysitemapgenerator.com	-->
+		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+	<loc>https://saaddev-io.web.app/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/project/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/service/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/client/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/contact/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/mails/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/create_auth/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/mail-auth/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/dashboard/all/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/mail/inbox/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/mail/sent/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/mail/draft/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/mail/spam/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/dashboard/saaddev/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/dashboard/ecommerce/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/dashboard/fin/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/dashboard/mms/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/dashboard/todo/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://saaddev-io.web.app/compose/</loc>
+	<lastmod>2024-03-08T07:26:51+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>

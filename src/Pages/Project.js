@@ -34,7 +34,7 @@ const Project = () => {
     <div>
         <main class={style.project} id="project">
             <div class={style.project__title}>
-                <h1>Projects</h1>
+                <h1><span>P</span>rojects</h1>
             </div>
             <div class={style.project__list}>
           {
@@ -48,11 +48,10 @@ const Project = () => {
                 <div className={style.project__detail}>
                     <div className={style.project__name}>
                         <Link>
-                        <p>{project.name}
-
+                        <p>
+                            {project.name}
                         </p>
                         </Link>
-                        <hr/>
                     </div>
 
                     <div className={style.project__description}>
@@ -65,22 +64,22 @@ const Project = () => {
                         <Link to={project.link} target='_blank'><img src={link} alt=''/></Link>
                     </div>
 
-                    <div className={style.project__stack}>
-                        <ul>
-                            {project.get_stack_list.map((stack)=>(
-                              <li>{stack}</li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/*<div className={style.project__stack}>*/}
+                    {/*    <ul>*/}
+                    {/*        {project.get_stack_list.map((stack)=>(*/}
+                    {/*          <li>{stack}</li>*/}
+                    {/*        ))}*/}
+                    {/*    </ul>*/}
+                    {/*</div>*/}
                 </div>
             </div>
             ))}
           </div>
         </main>
-      <main className={style.project} id="project">
-        <div className={style.heading}>
-          <h3>Project Statstics</h3>
-        </div>
+        <main className={style.project} id="project">
+            <div className={style.project__title}>
+                <h1><span>Project </span> Statstics</h1>
+            </div>
 
       {/* Project Statstics Start */}
         <div className={style.table}>
@@ -88,7 +87,7 @@ const Project = () => {
             <p>SL No</p>
             <p>Name</p>
             <p>Status</p>
-            <p>Link</p>
+            {/* <p>Link</p> */}
           </div>
           
           {projectStats.map((projectStat)=>(
@@ -97,7 +96,7 @@ const Project = () => {
             <p>{projectStat.id}</p>
             <p>{projectStat.get_project_name}</p>
             <p>{projectStat.get_status}</p>
-            <p><Link to={projectStat.get_project_link} target='_blank'>View</Link></p>
+            {/* <p><Link to={projectStat.get_project_link} target='_blank'>View</Link></p> */}
           </div>
 
           ))}

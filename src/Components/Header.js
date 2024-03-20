@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  
+  const navigate = useNavigate()
   let menu = document.querySelector(".menu");
   const navMenu = () => {
     let navBar = document.querySelector(".nav-bar");
@@ -18,7 +18,7 @@ const Header = () => {
     <div>
         <header>
             <div className="logo">
-                <h2>SAAD DEV</h2>
+                <h2>SAAD <span>DEV</span></h2>
             </div>
             <div className="menu" style={{cursor:'pointer', width: 30}} onClick={navMenu}>
               <div className="line"></div>
@@ -30,22 +30,22 @@ const Header = () => {
                 <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/service/' >Service</NavLink></li>
                 <li><NavLink to='/project/'>Project</NavLink></li>
-                <li><NavLink to='/client/'>Client</NavLink></li>
-                <li><NavLink to='/contact/'>Contact</NavLink></li>
+                {/*<li><NavLink to='/client/'>Client</NavLink></li>*/}
+                <li><button onClick={()=>navigate('/contact')} className='contactme'>Contact</button></li>
 
-                {(username && password) ?
-                <li><NavLink to='/mails/'>Mail</NavLink></li>
-                :
-                window.location.pathname==="/create_auth/" ? 
-                <li><NavLink to='/create_auth/'>Create Web Mail</NavLink></li> 
+              {/*  {(username && password) ?*/}
+              {/*  <li><NavLink to='/mails/'>Mail</NavLink></li>*/}
+              {/*  :*/}
+              {/*  window.location.pathname==="/create_auth/" ? */}
+              {/*  <li><NavLink to='/create_auth/'>Create Web Mail</NavLink></li> */}
 
-                :
-                <li><NavLink to='/mail-auth/'>Mail Auth</NavLink></li>
-            
-                }
-                {username==="saad" ? 
-                <li><NavLink to='/dashboard/all/'>Dashboard</NavLink></li>:<></>
-              }
+              {/*  :*/}
+              {/*  <li><NavLink to='/mail-auth/'>Mail Auth</NavLink></li>*/}
+
+              {/*  }*/}
+              {/*  {username==="saad" ? */}
+              {/*  <li><NavLink to='/dashboard/all/'>Dashboard</NavLink></li>:<></>*/}
+              {/*}*/}
 
             </ul>
             </div>

@@ -8,12 +8,11 @@
     gap: 2vh;
     justify-content: center;
     align-items: center;
-    padding: 2% 10%;
-    height: auto;
+  height: auto;
     width: 100%;
     box-sizing: border-box;
-    padding-bottom: 5rem;
-  }
+  padding: 2% 10% 5rem;
+}
 
   .project__title {
     font-size: 1.5rem;

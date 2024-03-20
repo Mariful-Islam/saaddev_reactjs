@@ -9,7 +9,7 @@ const FooterComponent = () => {
 
             </div>
             <div class="footer__contact">
-            <h3>Follow me on</h3>
+            <h1>Follow me on</h1>
             <ul class="contact__item">
                 <li><Link to='https://www.facebook.com/saad590/' target='_blank'><svg viewBox="0 0 512 512"
                     id="fb">

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import arrRight from '../assets/arrow_right.png'
+
+
 
 const Service = () => {
   const navigate = useNavigate()
@@ -19,8 +22,8 @@ const Service = () => {
   return (
     <div>
         <main className='service' id="service">
-          <div className='heading'>
-            <h1>Services</h1>
+          <div>
+            <h1><span>S</span>ervices</h1>
           </div>
 
           <div className='service__list'>
@@ -28,8 +31,9 @@ const Service = () => {
               {services.map((service)=>(
               <li onClick={()=>navigate(`/service/${service.id}`)}>
                 <img src={`http://saaddev.pythonanywhere.com/${service.image}`} alt=''/>
-                <br/>
-                {service.name}
+
+                <strong>{service.name}</strong>
+                {/*<p>Read More <img src={arrRight}/></p>*/}
               </li>
               ))}
             </ul>
