@@ -72,7 +72,7 @@
   }
 
 .project__title h1 span {
-  color: var(--color);
+  color: var(--c1);
 }
 .project__list {
     display: grid;

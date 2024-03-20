@@ -18,7 +18,7 @@ const Intro = () => {
               <div>
                 <h1>
                   Hi !! <br/>
-                  I am a Software Developer <br/>
+                  I am a Software <span>Developer</span> <br/>
                 </h1>
                     <div className="line">
                     </div>
@@ -26,7 +26,7 @@ const Intro = () => {
               </div>
               <div>
                 <img src={Mariful} alt=''/> <br/>
-                <h3 style={{textAlign:"center"}}>Mariful Islam Saad</h3>
+                <h3 style={{textAlign:"center"}}>Mariful Islam <span>Saad</span></h3>
               </div>
           </div>
           <div>

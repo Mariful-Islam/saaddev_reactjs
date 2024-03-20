@@ -36,7 +36,8 @@ body {
 }
 
 :root {
-  --color: rgb(158, 84, 255);
+  --color: rgb(54, 54, 54);
+  --c1: rgb(94, 15, 197);
   --bg-color: #ffffff;
   --border-color: rgba(135, 67, 227, 0.11);
 }
@@ -84,6 +85,10 @@ header {
   align-items: center;
 }
 
+.logo h2 span {
+  color: var(--c1);
+}
+
 .menu {
   position: absolute;
   right: 0;
@@ -93,8 +98,8 @@ header {
 }
 
 .menu .line {
-  height: 4px;
-  width: 25px;
+  height: 2px;
+  width: 20px;
   margin: 5px;
   border-radius: 12px;
 }
@@ -121,21 +126,21 @@ header {
 }
 
 .nav__list li a:is(:link, :active, :visited).active {
-  border-bottom: 1px solid var(--color);
-  color: var(--color);
+  border-bottom: 1px solid var(--c1);
+  color: var(--c1);
 }
 .nav__list li a:is(:link, :active, :visited):hover {
-  border-bottom: 1px solid var(--color);
-  color: var(--color);
+  border-bottom: 1px solid var(--c1);
+  color: var(--c1);
 }
 
 .nav__list li a.active {
-  border-bottom: 1px solid var(--color);
-  color: var(--color);
+  border-bottom: 1px solid var(--c1);
+  color: var(--c1);
 }
 
 .contactme {
-  background-color: var(--color);
+  background-color: var(--c1);
   color: white;
   border: none;
   border-radius: 20px;
@@ -174,6 +179,10 @@ header {
 
 }
 
+.myself__wrapper div div h1 span, .myself__wrapper div div h3 span {
+  color: var(--c1);
+}
+
 .myself__wrapper > div {
   display: flex;
   flex-direction: row;
@@ -200,15 +209,15 @@ header {
   height: 50px;
   width: 200px;
   border-radius: 30px;
-  border: 1px solid var(--color);
-  color: var(--color);
+  border: 1px solid var(--c1);
+  color: var(--c1);
   font-size: 20px;
   font-weight: 700;
   margin-top: -100px;
 }
 
 .ping:hover{
-  background-color: var(--color);
+  background-color: var(--c1);
   color: white;
   transition: all 0.2s linear;
 }
@@ -223,12 +232,12 @@ header {
   color: black;
   font-size: 30px;
   font-weight: 700;
-  text-align: justify;
+  text-align: center;
   width: 50%;
 }
 
 .introduction p span {
-  color: var(--color);
+  color: var(--c1);
   font-size: 35px;
 }
 
@@ -366,7 +375,7 @@ footer {
 }
 
 .service h1 span {
-  color: var(--color);
+  color: var(--c1);
 }
 
 .service__item {
@@ -393,10 +402,8 @@ footer {
   gap: 10px;
   height: 25rem;
   border-radius: 7px ;
-  
-  background-color: #ebeef1;
-  box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
-  -10px -10px 10px -1px rgba(255, 255, 255, 0.7);;
+  background-color: #f1f1f1;
+  box-shadow: 0 0 0 0.1rem var(--border-color);
   transition: all 0.2s linear;
 }
 
@@ -504,7 +511,7 @@ footer {
   .menu {
     display: block;
     cursor: pointer;
-    width: 10px;
+    width: 8px;
   }
 
   .menu.bar {
@@ -1232,7 +1239,7 @@ body {
 }
 
 .contact__title h1 span {
-  color: #9e54ff;
+  color: var(--c1);
 }
  /* ==============================Contact Page Start==================== */
 
@@ -1248,8 +1255,9 @@ body {
   align-items: center;
   }
 
-  .contact__wrapper {
-  }
+.contact__wrapper {
+  
+}
 .contact__form {
   padding: 10px 50px 40px;
   border-radius: 7px;
@@ -1275,7 +1283,7 @@ body {
   .contact__form form input, .contact__form form textarea {
     height: 2rem;
     width: 30rem;
-    border: 1px solid var(--color);
+    border: 1px solid var(--c1);
     border-radius: 5px;
     padding: 2px 10px;
     transition: all 0.2s linear;
@@ -1288,25 +1296,25 @@ body {
 
   .contact__form form input:focus, textarea:focus {
     /* border: 2px solid #1aa6d1; */
-    box-shadow: 0 0 0 0.1rem var(--color);
+    box-shadow: 0 0 0 0.1rem var(--c1);
     outline: 0;
   }
 
   .contact__form form input[type="submit"] {
     background-color: var(--bg-color);
-    color: var(--color);
+    color: var(--c1);
     font-size: 0.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    border: 1px solid var(--color);
+    border: 1px solid var(--c1);
     transition: all 0.2s linear;
     margin-top: 20px;
     width: 150px;
   }
 
   .contact__form form input[type="submit"]:hover {
-    box-shadow: 0 0 0 0.1rem var(--color);
-    background-color: var(--color);
+    box-shadow: 0 0 0 0.1rem var(--c1);
+    background-color: var(--c1);
     color: white;
   }
 
@@ -1318,6 +1326,12 @@ body {
 
     .contact__container {
       padding: 2% 10px;
+    }
+    .contact__form {
+      width: 70%;
+    }
+    .contact__form form input,.contact__form form textarea {
+      width: 95%;
     }
   }
 
