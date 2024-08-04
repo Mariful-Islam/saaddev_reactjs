@@ -1,44 +1,43 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import arrRight from '../assets/arrow_right.png'
-
+import useApi from '../utils/api'
+import { API_URL } from '../utils/interceptor'
 
 
 const Service = () => {
+  const api = useApi()
   const navigate = useNavigate()
-  let [services, setServices] = useState([])
+  const [services, setServices] = useState([])
+  console.log(services)
 
-  useEffect(()=>{
+  useEffect(() => {
     getServices()
-  },[])
+  }, [])
 
-  let getServices = async() => {
-    let response = await fetch('http://saaddev.pythonanywhere.com/saad-dev-api/services/')
-    let data = await response.json()
-    setServices(data)
+  const getServices = () => {
+    api.services().then((response) => setServices(response.data)).catch((error) => console.log(error))
   }
 
 
   return (
     <div>
-        <main className='service' id="service">
-          <div>
-            <h1><span>S</span>ervices</h1>
-          </div>
+      <main className='service' id="service">
+        <div>
+          <h1><span>S</span>ervices</h1>
+        </div>
 
-          <div className='service__list'>
-            <ul className='service__item'>
-              {services.map((service)=>(
-              <li onClick={()=>navigate(`/service/${service.id}`)}>
-                <img src={`http://saaddev.pythonanywhere.com/${service.image}`} alt=''/>
+        <div className='service__list'>
+          <ul className='service__item'>
+            {services?.map((service, i) => (
+              <li key={i} onClick={() => navigate(`/service/${service.id}`)}>
+                <img src={`${API_URL}${service.image}`} alt='' />
 
                 <strong>{service.name}</strong>
-                {/*<p>Read More <img src={arrRight}/></p>*/}
               </li>
-              ))}
-            </ul>
-          </div>
-        </main>
+            ))}
+          </ul>
+        </div>
+      </main>
     </div>
   )
 }

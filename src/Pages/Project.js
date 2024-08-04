@@ -1,87 +1,84 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from './Project.module.css'
-import github from '../assets/icon/github.svg'
-import link from '../assets/icon/link.svg'
-
+import useApi from '../utils/api'
+import { API_URL } from '../utils/interceptor'
 
 const Project = () => {
+  const api = useApi()
+  const [projects, setProjects] = useState([])
 
-    let [projects, setProjects] = useState([])
+  useEffect(() => {
+    getProjects()
+  }, [])
 
-    useEffect(()=>{
-      getProjects()
-    },[])
+  const getProjects = async () => {
+    api.projects().then((response) => setProjects(response.data)).catch((error) => console.log(error))
+  }
 
-    let getProjects = async() => {
-      let response = await fetch('http://saaddev.pythonanywhere.com/saad-dev-api/projects/')
-      let data = await response.json()
-      setProjects(data)
-    }
+  const [projectStats, setProjectStats] = useState([])
 
-    let [projectStats, setProjectStats] = useState([])
+  useEffect(() => {
+    getProjectStats()
+  }, [])
 
-    useEffect(()=>{
-      getProjectStats()
-    },[])
-
-    let getProjectStats = async() => {
-      let response = await fetch('http://saaddev.pythonanywhere.com/saad-dev-api/project-statstic/')
-      let data = await response.json()
-      setProjectStats(data)
-    }
+  const getProjectStats = async () => {
+    const response = await fetch('http://saaddev.pythonanywhere.com/saad-dev-api/project-statstic/')
+    const data = await response.json()
+    setProjectStats(data)
+  }
   return (
     <div>
-        <main class={style.project} id="project">
-            <div class={style.project__title}>
-                <h1><span>P</span>rojects</h1>
-            </div>
-            <div class={style.project__list}>
+      <main class={style.project} id="project">
+        <div class={style.project__title}>
+          <h1><span>P</span>rojects</h1>
+        </div>
+        <div class={style.project__list}>
           {
-              projects.map((project)=>(
-            <div>
+            projects?.map((project, i) => (
+              <div key={i}>
 
                 <div className={style.project__image}>
-                    <Link><img src={`https://saaddev.pythonanywhere.com/${project.image}`} alt="" /></Link>
+                  <Link><img src={`${API_URL}${project.image}`} alt="" /></Link>
+
                 </div>
 
                 <div className={style.project__detail}>
-                    <div className={style.project__name}>
-                        <Link>
-                        <p>
-                            {project.name}
-                        </p>
-                        </Link>
-                    </div>
+                  <div className={style.project__name}>
+                    <Link to={`/project/${project.id}`} >
+                      {project.name}
+                    </Link>
+                  </div>
 
-                    <div className={style.project__description}>
-                        <p>{project.description}</p>
+                  <div className={style.project__description}>
+                    <p>{project.description}</p>
 
-                    </div>
+                  </div>
 
-                    <div className={style.project__link}>
-                        <Link to={project.github} target='_blank'><img src={github} alt=''/></Link>
-                        <Link to={project.link} target='_blank'><img src={link} alt=''/></Link>
-                    </div>
+                  <div className={style.project__link}>
+                    <Link to={project.frontend} target='_blank'>Frontend</Link>
+                    <Link to={project.backend} target='_blank'>Backend</Link>
+                    <Link to={project.link} target='_blank'>Live</Link>
+                  </div>
 
-                    {/*<div className={style.project__stack}>*/}
-                    {/*    <ul>*/}
-                    {/*        {project.get_stack_list.map((stack)=>(*/}
-                    {/*          <li>{stack}</li>*/}
-                    {/*        ))}*/}
-                    {/*    </ul>*/}
-                    {/*</div>*/}
+                  <div className={style.project__stack}>
+                    <ul>
+                      {project.get_stack_list?.map((stack, i) => (
+                        <li key={i}>{stack}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-            </div>
+              </div>
             ))}
-          </div>
-        </main>
-        <main className={style.project} id="project">
-            <div className={style.project__title}>
-                <h1><span>Project </span> Statstics</h1>
-            </div>
+        </div>
+      </main>
+      <main className={style.project} id="project">
+        <div className={style.project__title}>
+          <h1><span>Project </span> Statstics</h1>
+        </div>
 
-      {/* Project Statstics Start */}
+        {/* Project Statstics Start */}
         <div className={style.table}>
           <div className={style.table_header}>
             <p>SL No</p>
@@ -89,21 +86,21 @@ const Project = () => {
             <p>Status</p>
             {/* <p>Link</p> */}
           </div>
-          
-          {projectStats.map((projectStat)=>(
 
-          <div className={style.table_data} styles="color: white;">
-            <p>{projectStat.id}</p>
-            <p>{projectStat.get_project_name}</p>
-            <p>{projectStat.get_status}</p>
-            {/* <p><Link to={projectStat.get_project_link} target='_blank'>View</Link></p> */}
-          </div>
+          {projectStats?.map((projectStat, i) => (
+
+            <div key={i} className={style.table_data} styles="color: white;">
+              <p>{projectStat.id}</p>
+              <p>{projectStat.get_project_name}</p>
+              <p>{projectStat.get_status}</p>
+              {/* <p><Link to={projectStat.get_project_link} target='_blank'>View</Link></p> */}
+            </div>
 
           ))}
-          
+
         </div>
-    </main>
-  {/* Project Statstics End  */}
+      </main>
+      {/* Project Statstics End  */}
     </div>
   )
 }

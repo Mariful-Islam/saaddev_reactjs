@@ -1,29 +1,31 @@
-import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import useApi from "../utils/api";
+import { API_URL } from "../utils/interceptor";
 
-let ServiceView = () => {
-    let {id} = useParams()
-    let [service, setService] = useState([])
+const ServiceView = () => {
+    const { id } = useParams()
+    const api = useApi()
+    const [service, setService] = useState([])
 
-    useEffect(()=>{
+    useEffect(() => {
         getService()
-      },[])
+    }, [])
 
-      let getService = async() => {
-        let response = await fetch(`http://saaddev.pythonanywhere.com/saad-dev-api/service/${id}/`)
-        let data = await response.json()
-        setService(data)
-      }
-      function desc() {
-          return {__html: service.description};
-        }
+    const getService = async () => {
+        api.service(id).then((response) => setService(response.data)).catch((error) => console.log(error))
+    }
+
+    function desc() {
+        return { __html: service.description };
+    }
 
 
     return (
         <div className='service_view'>
             <h1>{service.name}</h1>
             <div>
-                <img src={`http://saaddev.pythonanywhere.com/${service.image}`} alt=''/>
+                <img src={`${API_URL}${service.image}`} alt='' />
                 <div className="service_view_desc">
                     <div dangerouslySetInnerHTML={desc()} />
                 </div>

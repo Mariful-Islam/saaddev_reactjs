@@ -14,6 +14,7 @@ import MailAuth from './Pages/MailAuth';
 import CreateMailAuth from './Pages/CreateMailAuth';
 import Dashboard from './Pages/Dashboard';
 import ServiceView from "./Pages/ServiceView";
+import ProjectView from './Pages/ProjectView';
 
 
 
@@ -21,28 +22,29 @@ function App() {
   return (
     <div className="App">
       <div>
-      <BrowserRouter>
-        <Header/>
-        
+        <BrowserRouter>
+          <Header />
+
           <Routes>
-            <Route Component={Home} path='/'/>
-            <Route Component={Service} path='/service/'/>
+            <Route Component={Home} path='/' />
+            <Route Component={Service} path='/service/' />
             <Route Component={ServiceView} path='/service/:id/' />
-            <Route Component={Project} path='/project/'/>
-            <Route Component={Client} path='/client/'/>
-            <Route Component={Contact} path='/contact/'/>
-            <Route Component={MailAuth} path='/mail-auth/'/>
-            <Route Component={Mail} path='/mails/'/>
-            <Route Component={Mail} path='/mail/:category'/>
-            <Route Component={MailView} path='/mail-view/:id/'/>
-            <Route Component={MailCompose} path='/compose/'/>
+            <Route Component={Project} path='/project/' />
+            <Route Component={ProjectView} path='/project/:id' />
+            <Route Component={Client} path='/client/' />
+            <Route Component={Contact} path='/contact/' />
+            <Route Component={MailAuth} path='/mail-auth/' />
+            <Route Component={Mail} path='/mails/' />
+            <Route Component={Mail} path='/mail/:category' />
+            <Route Component={MailView} path='/mail-view/:id/' />
+            <Route Component={MailCompose} path='/compose/' />
             <Route Component={CreateMailAuth} path='/create_auth/' />
             <Route Component={Dashboard} path='/dashboard/:project/' />
           </Routes>
-        <FooterComponent/>
-      </BrowserRouter>
+          <FooterComponent />
+        </BrowserRouter>
       </div>
-      
+
     </div>
   );
 }

@@ -7,14 +7,14 @@ import style from '../Components/ClientComponent.module.css'
 
 const Client = () => {
 
-  let [clients, setClients] = useState([])
-  useEffect(()=>{
+  const [clients, setClients] = useState([])
+  useEffect(() => {
     getClients()
-  },[])
+  }, [])
 
-  let getClients = async() => {
-    let response = await fetch('http://saaddev.pythonanywhere.com/saad-dev-api/clients/')
-    let data = await response.json()
+  const getClients = async () => {
+    const response = await fetch('http://saaddev.pythonanywhere.com/saad-dev-api/clients/')
+    const data = await response.json()
     setClients(data)
   }
 
@@ -28,25 +28,25 @@ const Client = () => {
 
 
         <div class="client__list">
-          
+
           <div id="client__slider">
-              <Carousel showArrows={true} autoPlay={true} infiniteLoop={true} interval={1200}>
-                        
-                          {clients.map((client)=>(
+            <Carousel showArrows={true} autoPlay={true} infiniteLoop={true} interval={1200}>
 
-                           <div>                        
-                            <div className={style.client__name}>
-                                <p>{client.name}
+              {clients?.map((client, i) => (
 
-                                </p>
-                            </div>
-                            <div className={style.client__review}>
-                                <p>{client.review}</p>
-                            </div>
-                        </div>
-))}                           
-                    </Carousel>
-              </div>
+                <div key={i}>
+                  <div className={style.client__name}>
+                    <p>{client.name}
+
+                    </p>
+                  </div>
+                  <div className={style.client__review}>
+                    <p>{client.review}</p>
+                  </div>
+                </div>
+              ))}
+            </Carousel>
+          </div>
         </div>
       </main>
 

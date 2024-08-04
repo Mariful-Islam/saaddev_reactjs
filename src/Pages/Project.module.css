@@ -77,7 +77,7 @@
 .project__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    gap: 0px;
     text-align: center;
     justify-items: center;
     align-items: center;
@@ -90,27 +90,20 @@
   }
 
 .project__list > div {
-  box-shadow: 0 0 0 0.2rem rgba(94, 94, 94, 0.19);
   background-color: var(--border-color);
+  border: 1px solid #dfdfdf 
 }
 
 
 
 .project__list > div {
     position: relative;
-    height: 25rem;
+    height: 30rem;
     width: 90%;
     margin-top: 2rem;
-  background-color: #ebeef1;
-  box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
-  -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+  background-color: white;
+  
   transition: all 0.2s linear;
-  }
-
-
-.project__list > div:hover{
-    transform: scale(1.02);
-    
   }
   
   .project__detail {
@@ -145,14 +138,10 @@
   }
 
   .project__link {
-    position: absolute;
-    bottom: 10px;
-    left: 40%;
-    display: flex;
-    gap: 15px;
-    justify-content: center;  
-    align-items: flex-end;  
-    
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   gap: 12px;  
   }
 
   .project__link img {
@@ -178,7 +167,7 @@
   }
   
   .project__stack ul li {
-    background-color: #a3a6d1;
+    background-color: #ece3ec;
     border-radius: 12px;
     padding: 3px 5px;
     font-size: 12px;

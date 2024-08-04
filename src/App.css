@@ -64,6 +64,7 @@ h1 {
 }
 
 .wrapper {
+  margin: 0 10% 2rem;
   padding: 0 10% 2rem;
 }
 
@@ -483,6 +484,21 @@ footer {
   .project__stack ul li {
     padding: 2px 3px;
   }
+}
+
+.project__stack ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  gap: 7px;
+}
+
+.project__stack ul li {
+  background-color: #ece3ec;
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: black;
 }
 
 @media screen and (max-width: 600px) {

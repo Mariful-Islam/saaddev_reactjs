@@ -2,36 +2,36 @@ import React, { createContext, useEffect, useState } from 'react'
 
 
 
-let OrderItemContext = createContext()
+const OrderItemContext = createContext()
 export default OrderItemContext
 
-export const OrderItemProvider = ({children}) => {
+export const OrderItemProvider = ({ children }) => {
 
-    let username = localStorage.getItem('username')
+    const username = localStorage.getItem('username')
 
-    let [orderItems, setOrderItems] = useState([])
+    const [orderItems, setOrderItems] = useState([])
 
 
-    useEffect(()=>{
+    useEffect(() => {
         getOrderItems()
     }, [])
 
-    let getOrderItems = async() => {
-        let response = await fetch(`/ecom/order_items/${username}/`)
-        let data = await response.json()
+    const getOrderItems = async () => {
+        const response = await fetch(`/ecom/order_items/${username}/`)
+        const data = await response.json()
         setOrderItems(data)
     }
 
-    let contextData = {
+    const contextData = {
         getOrderItems: getOrderItems,
         orderItems: orderItems
     }
 
-  return (
-    <div>
-        <OrderItemContext.Provider value={contextData}>
-            {children}
-        </OrderItemContext.Provider>
-    </div>
-  )
+    return (
+        <div>
+            <OrderItemContext.Provider value={contextData}>
+                {children}
+            </OrderItemContext.Provider>
+        </div>
+    )
 }
