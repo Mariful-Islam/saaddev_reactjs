@@ -98,12 +98,12 @@
 
 .project__list > div {
     position: relative;
-    height: 30rem;
+    height: auto;
     width: 90%;
     margin-top: 2rem;
-  background-color: white;
+    background-color: white;
   
-  transition: all 0.2s linear;
+    transition: all 0.2s linear;
   }
   
   .project__detail {
@@ -159,11 +159,9 @@
     list-style: none;
     text-decoration: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 7px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: auto 10px 10px auto;
+    margin: 70px 10px 10px auto;
   }
   
   .project__stack ul li {
